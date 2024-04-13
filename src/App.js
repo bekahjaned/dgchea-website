@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import Hero from './Components/Hero'
+import About from './Components/About'
+import Contact from './Components/Contact'
+import './styles.css'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+            <Helmet>
+                <title>Dundas Grenville Christian Home Educator’s Association</title>
+                <meta name="description" content="Information about the Dundas Grenville Christian Home Educator’s Association" />
+                <meta name="keywords" content="christian, dgchea, north dundas, south dundas, homeschool, home school, homeschooling, grenville, home education, home educator" />
+                <meta name="author" content="Rebekah D" />
+            </Helmet>
+            <Hero/>
+            <About />
+            <Contact />
+        </div>
+    )
 }
 
-export default App;
+export default App
